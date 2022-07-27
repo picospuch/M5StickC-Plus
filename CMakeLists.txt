@@ -10,6 +10,8 @@ set(COMPONENT_PRIV_INCLUDEDIRS src/Fonts
                                src/Fonts/TrueType 
                                src/utility)
 
-set(COMPONENT_PRIV_REQUIRES arduino)
+set(COMPONENT_PRIV_REQUIRES arduino-esp32)
 
 register_component()
+
+component_compile_options("-Wno-error=unused-const-variable")
